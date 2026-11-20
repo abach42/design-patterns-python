@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "designpatterns"
+version = "1.0.0"
+description = "Python design patterns cheat sheet: all 23 Gang of Four (GoF) patterns with examples and pytest tests"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "GNU General Public License v3.0" }
+authors = [{ name = "abach42" }]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+]
+
+[project.urls]
+Homepage = "https://github.com/abach42/design-patterns-python"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
